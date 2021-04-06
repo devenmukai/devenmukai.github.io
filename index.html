@@ -15,6 +15,8 @@
      var h = window.innerHeight;
      //declare variable for sound
      var boing;
+     //declare variable for picture
+     var fireball;
      
      //BUild a function to preload
      function preload() {
@@ -23,14 +25,19 @@
      }
      function setup() {
        createCanvas(w,h)
+       fireball = loadImage("fireball.png");
        
      }
      
      function draw() {
+       clear();
+       //image(variable,x,y,width,height)
+       image(fireball,mouseX,mouseY,100,60)
        //when someone presses the spacebar
        if (keyIsDown(32)) {
          //play the boing sound
          boing.play();
+         
        }
      }
     </script>
